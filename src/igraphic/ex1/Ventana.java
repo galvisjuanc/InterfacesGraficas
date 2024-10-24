@@ -1,6 +1,7 @@
 package igraphic.ex1;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Ventana extends JFrame {
 
@@ -10,7 +11,8 @@ public class Ventana extends JFrame {
         //this.setLocation(100,200);
         this.setSize(500,500);
         this.setLocationRelativeTo(null);
-        this.setResizable(false);
+        this.setResizable(true);
+        this.setMinimumSize(new Dimension(200,200));
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }
