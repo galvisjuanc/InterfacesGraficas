@@ -13,6 +13,8 @@ public class Ventana extends JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(true);
         this.setMinimumSize(new Dimension(200,200));
+
+        this.getContentPane().setBackground(Color.CYAN);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }
