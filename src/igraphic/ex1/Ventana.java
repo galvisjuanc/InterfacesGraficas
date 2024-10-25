@@ -22,9 +22,12 @@ public class Ventana extends JFrame {
         JPanel jPanel = new JPanel();
 
         jPanel.setBackground(Color.YELLOW);
+        jPanel.setLayout(null);
         this.getContentPane().add(jPanel);
 
-        JLabel jLabel = new JLabel("Hello World");
+        JLabel jLabel = new JLabel();
+        jLabel.setText("Hello World");
+        jLabel.setBounds(10,10,100,30);
         jPanel.add(jLabel);
     }
 }
