@@ -27,7 +27,10 @@ public class Ventana extends JFrame {
 
         JLabel jLabel = new JLabel();
         jLabel.setText("Hello World");
-        jLabel.setBounds(10,10,100,30);
+        jLabel.setBounds(20,20,100,30);
+        jLabel.setOpaque(true);
+        jLabel.setForeground(Color.RED);
+        jLabel.setBackground(Color.WHITE);
         jPanel.add(jLabel);
     }
 }
