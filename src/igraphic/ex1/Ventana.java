@@ -28,10 +28,12 @@ public class Ventana extends JFrame {
         JLabel jLabel = new JLabel();
         jLabel.setText("Hello World");
         jLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        jLabel.setBounds(20,20,100,30);
+        jLabel.setBounds(20,20,400,50);
         jLabel.setOpaque(true);
         jLabel.setForeground(Color.RED);
         jLabel.setBackground(Color.WHITE);
+
+        jLabel.setFont(new Font("Arial", Font.PLAIN, 30));
         jPanel.add(jLabel);
     }
 }
