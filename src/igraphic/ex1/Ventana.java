@@ -26,14 +26,17 @@ public class Ventana extends JFrame {
         this.getContentPane().add(jPanel);
 
         JLabel jLabel = new JLabel();
-        jLabel.setText("Hello World");
+        jLabel.setText("Mundial 2022");
         jLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        jLabel.setBounds(20,20,400,50);
+        jLabel.setBounds(85,10,300,100);
         jLabel.setOpaque(true);
-        jLabel.setForeground(Color.RED);
+        jLabel.setForeground(Color.BLACK);
         jLabel.setBackground(Color.WHITE);
-
-        jLabel.setFont(new Font("Arial", Font.PLAIN, 30));
+        jLabel.setFont(new Font("Cooper Black", Font.PLAIN, 30));
         jPanel.add(jLabel);
+
+        JLabel jImage = new JLabel(new ImageIcon("balon.jpg"));
+        jImage.setBounds(10,80, 450, 450);
+        jPanel.add(jImage);
     }
 }
