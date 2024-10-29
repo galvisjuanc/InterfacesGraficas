@@ -38,6 +38,7 @@ public class Ventana extends JFrame {
         ImageIcon icon = new ImageIcon("balon.jpg");
         JLabel jImage = new JLabel(icon);
         jImage.setBounds(10,80, 450, 450);
+        jImage.setIcon(new ImageIcon(icon.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
         jPanel.add(jImage);
     }
 }
