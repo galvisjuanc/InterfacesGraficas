@@ -35,7 +35,8 @@ public class Ventana extends JFrame {
         jLabel.setFont(new Font("Cooper Black", Font.PLAIN, 30));
         jPanel.add(jLabel);
 
-        JLabel jImage = new JLabel(new ImageIcon("balon.jpg"));
+        ImageIcon icon = new ImageIcon("balon.jpg");
+        JLabel jImage = new JLabel(icon);
         jImage.setBounds(10,80, 450, 450);
         jPanel.add(jImage);
     }
