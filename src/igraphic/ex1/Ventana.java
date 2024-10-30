@@ -5,6 +5,8 @@ import java.awt.*;
 
 public class Ventana extends JFrame {
 
+    public JPanel jPanel;
+
     public Ventana() {
         this.setTitle("Test Title");
         //this.setBounds(200, 200, 600, 600);
@@ -19,13 +21,22 @@ public class Ventana extends JFrame {
     }
 
     private void iniciarComponentes() {
-        JPanel jPanel = new JPanel();
+        colocarPaneles();
+        //colocarEtiquetas();
+        colocarBotones();
+    }
+
+    private void colocarPaneles () {
+        jPanel = new JPanel();
 
         jPanel.setBackground(Color.YELLOW);
         jPanel.setLayout(null);
         this.getContentPane().add(jPanel);
+    }
 
+    private void colocarEtiquetas() {
         JLabel jLabel = new JLabel();
+
         jLabel.setText("Mundial 2022");
         jLabel.setHorizontalAlignment(SwingConstants.CENTER);
         jLabel.setBounds(85,10,300,100);
@@ -40,5 +51,15 @@ public class Ventana extends JFrame {
         jImage.setBounds(10,80, 450, 450);
         jImage.setIcon(new ImageIcon(icon.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
         jPanel.add(jImage);
+    }
+
+    private void colocarBotones() {
+        JButton jButton = new JButton();
+
+        jButton.setText("Click");
+        jButton.setEnabled(true);
+        jButton.setMnemonic('a');
+        jButton.setBounds(100, 100, 100, 40);
+        jPanel.add(jButton);
     }
 }
