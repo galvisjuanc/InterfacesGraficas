@@ -29,7 +29,7 @@ public class Ventana extends JFrame {
     private void colocarPaneles () {
         jPanel = new JPanel();
 
-        jPanel.setBackground(Color.YELLOW);
+        jPanel.setBackground(Color.WHITE);
         jPanel.setLayout(null);
         this.getContentPane().add(jPanel);
     }
@@ -59,10 +59,16 @@ public class Ventana extends JFrame {
         jButton.setText("Click");
         jButton.setEnabled(true);
         jButton.setMnemonic('a');
-        jButton.setBounds(100, 100, 200, 40);
+        jButton.setBounds(100, 100, 200, 70);
 
         jButton.setForeground(Color.RED);
         jButton.setFont(new Font("Cooper Black", Font.PLAIN, 30));
         jPanel.add(jButton);
+
+        JButton imagejButton = new JButton();
+        imagejButton.setBounds(100, 300, 200, 70);
+        ImageIcon clicAqui = new ImageIcon("button.png");
+        imagejButton.setIcon(new ImageIcon(clicAqui.getImage().getScaledInstance(imagejButton.getWidth(), imagejButton.getHeight(), Image.SCALE_SMOOTH)));
+        jPanel.add(imagejButton);
     }
 }
