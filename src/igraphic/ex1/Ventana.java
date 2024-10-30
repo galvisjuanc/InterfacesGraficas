@@ -59,7 +59,10 @@ public class Ventana extends JFrame {
         jButton.setText("Click");
         jButton.setEnabled(true);
         jButton.setMnemonic('a');
-        jButton.setBounds(100, 100, 100, 40);
+        jButton.setBounds(100, 100, 200, 40);
+
+        jButton.setForeground(Color.RED);
+        jButton.setFont(new Font("Cooper Black", Font.PLAIN, 30));
         jPanel.add(jButton);
     }
 }
