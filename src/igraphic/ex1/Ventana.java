@@ -66,9 +66,14 @@ public class Ventana extends JFrame {
         jPanel.add(jButton);
 
         JButton imagejButton = new JButton();
-        imagejButton.setBounds(100, 300, 200, 70);
+        imagejButton.setBounds(100, 200, 200, 70);
         ImageIcon clicAqui = new ImageIcon("button.png");
         imagejButton.setIcon(new ImageIcon(clicAqui.getImage().getScaledInstance(imagejButton.getWidth(), imagejButton.getHeight(), Image.SCALE_SMOOTH)));
         jPanel.add(imagejButton);
+
+        JButton borderjButton = new JButton();
+        borderjButton.setBounds(100, 300, 110, 50);
+        borderjButton.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+        jPanel.add(borderjButton);
     }
 }
