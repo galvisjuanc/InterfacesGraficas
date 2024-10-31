@@ -73,7 +73,7 @@ public class Ventana extends JFrame {
 
         JButton borderjButton = new JButton();
         borderjButton.setBounds(100, 300, 110, 50);
-        borderjButton.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+        borderjButton.setBorder(BorderFactory.createLineBorder(Color.BLUE, 3));
         jPanel.add(borderjButton);
     }
 }
