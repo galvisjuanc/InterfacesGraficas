@@ -81,7 +81,10 @@ public class Ventana extends JFrame {
 
     private void colocarRadioBotones() {
         JRadioButton jRadioButton1 = new JRadioButton("Opcion 1", true);
-        jRadioButton1.setBounds(50,100,100,50);
+        jRadioButton1.setBounds(50,100,200,50);
+        jRadioButton1.setEnabled(false);
+        jRadioButton1.setText("Programa 1");
+        jRadioButton1.setFont(new Font("Cooper Black", Font.PLAIN, 20));
         jPanel.add(jRadioButton1);
 
         JRadioButton jRadioButton2 = new JRadioButton("Opcion 2", false);
