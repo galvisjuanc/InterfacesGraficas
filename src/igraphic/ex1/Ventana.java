@@ -91,5 +91,10 @@ public class Ventana extends JFrame {
         JRadioButton jRadioButton3 = new JRadioButton("Opcion 3", false);
         jRadioButton3.setBounds(50,200,100,50);
         jPanel.add(jRadioButton3);
+
+        ButtonGroup group = new ButtonGroup();
+        group.add(jRadioButton1);
+        group.add(jRadioButton2);
+        group.add(jRadioButton3);
     }
 }
