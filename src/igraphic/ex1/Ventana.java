@@ -23,8 +23,10 @@ public class Ventana extends JFrame {
     private void iniciarComponentes() {
         colocarPaneles();
         //colocarEtiquetas();
-        colocarBotones();
+        //colocarBotones();
+        colocarRadioBotones();
     }
+
 
     private void colocarPaneles () {
         jPanel = new JPanel();
@@ -75,5 +77,15 @@ public class Ventana extends JFrame {
         borderjButton.setBounds(100, 300, 110, 50);
         borderjButton.setBorder(BorderFactory.createLineBorder(Color.RED, 4, true));
         jPanel.add(borderjButton);
+    }
+
+    private void colocarRadioBotones() {
+        JRadioButton jRadioButton1 = new JRadioButton("Opcion 1", true);
+        jRadioButton1.setBounds(50,100,100,50);
+        jPanel.add(jRadioButton1);
+
+        JRadioButton jRadioButton2 = new JRadioButton("Opcion 2", false);
+        jRadioButton2.setBounds(50,150,100,50);
+        jPanel.add(jRadioButton2);
     }
 }
