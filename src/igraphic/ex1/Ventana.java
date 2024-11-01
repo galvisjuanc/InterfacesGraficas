@@ -103,8 +103,21 @@ public class Ventana extends JFrame {
     }
 
     private void colocarBotonesDeActivación() {
-        JToggleButton jToggleButton = new JToggleButton("Opcion 1", true);
-        jToggleButton.setBounds(50,100,100,50);
-        jPanel.add(jToggleButton);
+        JToggleButton jToggleButton1 = new JToggleButton("Opcion 1", true);
+        jToggleButton1.setBounds(50,100,100,30);
+        jPanel.add(jToggleButton1);
+
+        JToggleButton jToggleButton2 = new JToggleButton("Opcion 2", false);
+        jToggleButton2.setBounds(50,150,100,30);
+        jPanel.add(jToggleButton2);
+
+        JToggleButton jToggleButton3 = new JToggleButton("Opcion 3", false);
+        jToggleButton3.setBounds(50,200,100,30);
+        jPanel.add(jToggleButton3);
+
+        ButtonGroup group = new ButtonGroup();
+        group.add(jToggleButton1);
+        group.add(jToggleButton2);
+        group.add(jToggleButton3);
     }
 }
