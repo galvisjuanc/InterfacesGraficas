@@ -25,7 +25,8 @@ public class Ventana extends JFrame {
         //colocarEtiquetas();
         //colocarBotones();
         //colocarRadioBotones();
-        colocarBotonesDeActivación();
+        //colocarBotonesDeActivación();
+        colocarCajasDeTexto();
     }
 
 
@@ -119,5 +120,11 @@ public class Ventana extends JFrame {
         group.add(jToggleButton1);
         group.add(jToggleButton2);
         group.add(jToggleButton3);
+    }
+
+    private void colocarCajasDeTexto() {
+        JTextField jTextField = new JTextField();
+        jTextField.setBounds(50,50,100, 40);
+        jPanel.add(jTextField);
     }
 }
