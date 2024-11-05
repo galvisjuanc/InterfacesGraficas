@@ -124,7 +124,8 @@ public class Ventana extends JFrame {
 
     private void colocarCajasDeTexto() {
         JTextField jTextField = new JTextField();
-        jTextField.setBounds(50,50,100, 40);
+        jTextField.setBounds(50,50,200, 40);
+        jTextField.setText("Inserte un mensaje...");
         jPanel.add(jTextField);
     }
 }
