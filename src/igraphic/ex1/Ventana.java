@@ -34,7 +34,7 @@ public class Ventana extends JFrame {
     private void colocarPaneles () {
         jPanel = new JPanel();
 
-        jPanel.setBackground(Color.WHITE);
+        jPanel.setBackground(Color.GRAY);
         jPanel.setLayout(null);
         this.getContentPane().add(jPanel);
     }
@@ -135,6 +135,8 @@ public class Ventana extends JFrame {
         JTextArea jTextArea = new JTextArea();
         jTextArea.setBounds(20, 20, 300, 200);
         jTextArea.setText("Escriba el texto aquí: ");
+        jTextArea.append(" \nEscribe por aquí...");
+        jTextArea.setEditable(false);
         jPanel.add(jTextArea);
     }
 }
