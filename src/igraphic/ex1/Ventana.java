@@ -26,7 +26,8 @@ public class Ventana extends JFrame {
         //colocarBotones();
         //colocarRadioBotones();
         //colocarBotonesDeActivación();
-        colocarCajasDeTexto();
+        //colocarCajasDeTexto();
+        colocarAreasDeTexto();
     }
 
 
@@ -128,5 +129,11 @@ public class Ventana extends JFrame {
         jTextField.setText("Hola...");
         System.out.println("Text en la caja: " + jTextField.getText());
         jPanel.add(jTextField);
+    }
+
+    private void colocarAreasDeTexto() {
+        JTextArea jTextArea = new JTextArea();
+        jTextArea.setBounds(20, 20, 300, 200);
+        jPanel.add(jTextArea);
     }
 }
