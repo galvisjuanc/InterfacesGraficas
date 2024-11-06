@@ -136,7 +136,7 @@ public class Ventana extends JFrame {
         jTextArea.setBounds(20, 20, 300, 200);
         jTextArea.setText("Escriba el texto aquí: ");
         jTextArea.append(" \nEscribe por aquí...");
-        jTextArea.setEditable(false);
+        jTextArea.setEditable(true);
         jPanel.add(jTextArea);
     }
 }
