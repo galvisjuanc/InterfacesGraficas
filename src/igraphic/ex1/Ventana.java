@@ -27,7 +27,8 @@ public class Ventana extends JFrame {
         //colocarRadioBotones();
         //colocarBotonesDeActivación();
         //colocarCajasDeTexto();
-        colocarAreasDeTexto();
+        //colocarAreasDeTexto();
+        colocarCasillasDeVerificacion();
     }
 
 
@@ -144,5 +145,11 @@ public class Ventana extends JFrame {
         //jScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         //jScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         jPanel.add(jScrollPane);
+    }
+
+    private void colocarCasillasDeVerificacion() {
+        JCheckBox jCheckBox = new JCheckBox("Opcion 1");
+        jCheckBox.setBounds(20, 20, 100, 40);
+        jPanel.add(jCheckBox);
     }
 }
