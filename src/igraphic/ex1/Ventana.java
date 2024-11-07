@@ -138,5 +138,11 @@ public class Ventana extends JFrame {
         jTextArea.append(" \nEscribe por aquí...");
         jTextArea.setEditable(true);
         jPanel.add(jTextArea);
+
+        JScrollPane jScrollPane = new JScrollPane(jTextArea);
+        jScrollPane.setBounds(20, 20, 300, 200);
+        jScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        jScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        jPanel.add(jScrollPane);
     }
 }
