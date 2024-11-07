@@ -148,8 +148,20 @@ public class Ventana extends JFrame {
     }
 
     private void colocarCasillasDeVerificacion() {
-        JCheckBox jCheckBox = new JCheckBox("Opcion 1");
+        JCheckBox jCheckBox = new JCheckBox("Leche");
         jCheckBox.setBounds(20, 20, 100, 40);
         jPanel.add(jCheckBox);
+
+        JCheckBox jCheckBox1 = new JCheckBox("Galletas");
+        jCheckBox1.setBounds(20, 50, 100, 40);
+        jPanel.add(jCheckBox1);
+
+        JCheckBox jCheckBox2 = new JCheckBox("Yogurt");
+        jCheckBox2.setBounds(20, 80, 100, 40);
+        jPanel.add(jCheckBox2);
+
+        JCheckBox jCheckBox3 = new JCheckBox("Cereal");
+        jCheckBox3.setBounds(20, 110, 100, 40);
+        jPanel.add(jCheckBox3);
     }
 }
