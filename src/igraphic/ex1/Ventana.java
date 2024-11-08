@@ -28,7 +28,8 @@ public class Ventana extends JFrame {
         //colocarBotonesDeActivación();
         //colocarCajasDeTexto();
         //colocarAreasDeTexto();
-        colocarCasillasDeVerificacion();
+        //colocarCasillasDeVerificacion();
+        colocarListasDesplegables();
     }
 
 
@@ -163,5 +164,13 @@ public class Ventana extends JFrame {
         JCheckBox jCheckBox3 = new JCheckBox("Cereal");
         jCheckBox3.setBounds(20, 110, 100, 40);
         jPanel.add(jCheckBox3);
+    }
+
+    private void colocarListasDesplegables() {
+        String [] paises = {"Colombia", "Corea del Sur", "Francia", "Japon"};
+
+        JComboBox jComboBox = new JComboBox(paises);
+        jComboBox.setBounds(20,20,100,30);
+        jPanel.add(jComboBox);
     }
 }
