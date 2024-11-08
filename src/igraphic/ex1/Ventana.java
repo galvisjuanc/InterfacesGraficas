@@ -171,6 +171,9 @@ public class Ventana extends JFrame {
 
         JComboBox jComboBox = new JComboBox(paises);
         jComboBox.setBounds(20,20,100,30);
+
+        jComboBox.addItem("Paises Bajos");
+        jComboBox.setSelectedItem("Estados Unidos");
         jPanel.add(jComboBox);
     }
 }
