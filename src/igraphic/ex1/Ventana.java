@@ -176,9 +176,12 @@ public class Ventana extends JFrame {
         jComboBox.setSelectedItem("Estados Unidos");
         jPanel.add(jComboBox);*/
 
+        Persona persona = new Persona("Juan Galvis", 32, "Colombiano");
+
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        modelo.addElement(persona);
         JComboBox jComboBox1 = new JComboBox(modelo);
-        jComboBox1.setBounds(20, 20, 100, 40);
+        jComboBox1.setBounds(20, 20, 300, 40);
         jPanel.add(jComboBox1);
 
     }
