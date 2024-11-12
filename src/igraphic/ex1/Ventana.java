@@ -167,13 +167,19 @@ public class Ventana extends JFrame {
     }
 
     private void colocarListasDesplegables() {
-        String [] paises = {"Colombia", "Corea del Sur", "Francia", "Japon"};
+        /*String [] paises = {"Colombia", "Corea del Sur", "Francia", "Japon"};
 
         JComboBox jComboBox = new JComboBox(paises);
         jComboBox.setBounds(20,20,100,30);
 
         jComboBox.addItem("Paises Bajos");
         jComboBox.setSelectedItem("Estados Unidos");
-        jPanel.add(jComboBox);
+        jPanel.add(jComboBox);*/
+
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        JComboBox jComboBox1 = new JComboBox(modelo);
+        jComboBox1.setBounds(20, 20, 100, 40);
+        jPanel.add(jComboBox1);
+
     }
 }
