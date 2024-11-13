@@ -2,6 +2,7 @@ package igraphic.ex1;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Arrays;
 
 public class Ventana extends JFrame {
 
@@ -191,6 +192,9 @@ public class Ventana extends JFrame {
     private void colocarCampoDeContraseña() {
         JPasswordField jPasswordField = new JPasswordField();
         jPasswordField.setBounds(20, 20, 150, 40);
+        jPasswordField.setText("Hello");
         jPanel.add(jPasswordField);
+
+        System.out.println("Contraseña es: " + Arrays.toString(jPasswordField.getPassword()));
     }
 }
