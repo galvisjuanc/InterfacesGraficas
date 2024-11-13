@@ -29,7 +29,8 @@ public class Ventana extends JFrame {
         //colocarCajasDeTexto();
         //colocarAreasDeTexto();
         //colocarCasillasDeVerificacion();
-        colocarListasDesplegables();
+        //colocarListasDesplegables();
+        colocarCampoDeContraseña();
     }
 
 
@@ -185,6 +186,11 @@ public class Ventana extends JFrame {
         JComboBox jComboBox1 = new JComboBox(modelo);
         jComboBox1.setBounds(20, 20, 200, 40);
         jPanel.add(jComboBox1);
+    }
 
+    private void colocarCampoDeContraseña() {
+        JPasswordField jPasswordField = new JPasswordField();
+        jPasswordField.setBounds(20, 20, 150, 40);
+        jPanel.add(jPasswordField);
     }
 }
