@@ -192,9 +192,16 @@ public class Ventana extends JFrame {
     private void colocarCampoDeContraseña() {
         JPasswordField jPasswordField = new JPasswordField();
         jPasswordField.setBounds(20, 20, 150, 40);
-        jPasswordField.setText("Hello");
+        jPasswordField.setText("MariaGordis");
         jPanel.add(jPasswordField);
 
+        String contraseña = "";
+
+        for (int i = 0; i < jPasswordField.getPassword().length; i++) {
+            contraseña += jPasswordField.getPassword()[i];
+        }
+
         System.out.println("Contraseña es: " + Arrays.toString(jPasswordField.getPassword()));
+        System.out.println("Valor unido es: " + contraseña);
     }
 }
