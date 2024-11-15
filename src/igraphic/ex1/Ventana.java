@@ -215,6 +215,11 @@ public class Ventana extends JFrame {
         modelo.addColumn("Edad");
         modelo.addColumn("Nacionalidad");
 
+        String[] personal1 = {"Camilo", "32", "Colombiano"};
+        String[] personal2 = {"Juan", "23", "Francés"};
+        modelo.addRow(personal1);
+        modelo.addRow(personal2);
+
         JTable jTable = new JTable(modelo);
         jTable.setBounds(20, 20, 300, 300);
         jPanel.add(jTable);
