@@ -211,6 +211,10 @@ public class Ventana extends JFrame {
     private void colocarTablas () {
         DefaultTableModel modelo = new DefaultTableModel();
 
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Edad");
+        modelo.addColumn("Nacionalidad");
+
         JTable jTable = new JTable(modelo);
         jTable.setBounds(20, 20, 300, 300);
         jPanel.add(jTable);
