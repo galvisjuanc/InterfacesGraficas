@@ -246,11 +246,11 @@ public class Ventana extends JFrame {
 
 
         JTable jTable = new JTable(modelo);
-        jTable.setBounds(20, 20, 300, 300);
+        jTable.setBounds(20, 20, 300, 200);
         jPanel.add(jTable);
 
         JScrollPane scrollPane = new JScrollPane(jTable, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.setBounds(20, 20, 300, 300);
+        scrollPane.setBounds(20, 20, 300, 200);
         jPanel.add(scrollPane);
     }
 }
