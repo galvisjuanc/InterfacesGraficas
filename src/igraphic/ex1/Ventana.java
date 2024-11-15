@@ -1,6 +1,7 @@
 package igraphic.ex1;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.util.Arrays;
 
@@ -31,7 +32,9 @@ public class Ventana extends JFrame {
         //colocarAreasDeTexto();
         //colocarCasillasDeVerificacion();
         //colocarListasDesplegables();
-        colocarCampoDeContraseña();
+        //colocarCampoDeContraseña();
+        colocarTablas();
+
     }
 
 
@@ -203,5 +206,13 @@ public class Ventana extends JFrame {
 
         System.out.println("Contraseña es: " + Arrays.toString(jPasswordField.getPassword()));
         System.out.println("Valor unido es: " + contraseña);
+    }
+
+    private void colocarTablas () {
+        DefaultTableModel modelo = new DefaultTableModel();
+
+        JTable jTable = new JTable(modelo);
+        jTable.setBounds(20, 20, 300, 300);
+        jPanel.add(jTable);
     }
 }
