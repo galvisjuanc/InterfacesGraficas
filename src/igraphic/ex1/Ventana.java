@@ -217,8 +217,33 @@ public class Ventana extends JFrame {
 
         String[] personal1 = {"Camilo", "32", "Colombiano"};
         String[] personal2 = {"Juan", "23", "Francés"};
+        String[] personal3 = {"Cossette", "33", "Coreana"};
+        String[] personal4 = {"Natalie", "20", "Francesa"};
+        String[] personal5 = {"Maria", "43", "Japonesa"};
+        String[] personal6 = {"Fernanda", "16", "Alemana"};
+        String[] personal7 = {"José", "28", "Brasileño"};
+        String[] personal8 = {"David", "30", "Argentino"};
+        String[] personal9 = {"Douglas", "17", "Inglés"};
+        String[] personal10 = {"Pedro", "56", "Chino"};
+        String[] personal11 = {"Pablo", "65", "Ecuatoriano"};
+        String[] personal12 = {"Nelly", "36", "Indonesa"};
+        String[] personal13 = {"Paulina", "49", "Egiptés"};
+        String[] personal14 = {"Melva", "80", "Marroqui"};
         modelo.addRow(personal1);
         modelo.addRow(personal2);
+        modelo.addRow(personal3);
+        modelo.addRow(personal4);
+        modelo.addRow(personal5);
+        modelo.addRow(personal6);
+        modelo.addRow(personal7);
+        modelo.addRow(personal8);
+        modelo.addRow(personal9);
+        modelo.addRow(personal10);
+        modelo.addRow(personal11);
+        modelo.addRow(personal12);
+        modelo.addRow(personal13);
+        modelo.addRow(personal14);
+
 
         JTable jTable = new JTable(modelo);
         jTable.setBounds(20, 20, 300, 300);
