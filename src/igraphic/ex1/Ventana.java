@@ -33,7 +33,8 @@ public class Ventana extends JFrame {
         //colocarCasillasDeVerificacion();
         //colocarListasDesplegables();
         //colocarCampoDeContraseña();
-        colocarTablas();
+        //colocarTablas();
+        colocarListas();
 
     }
 
@@ -252,5 +253,13 @@ public class Ventana extends JFrame {
         JScrollPane scrollPane = new JScrollPane(jTable, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         scrollPane.setBounds(20, 20, 300, 200);
         jPanel.add(scrollPane);
+    }
+
+    private void colocarListas() {
+        DefaultListModel modelo = new DefaultListModel();
+
+        JList jList = new JList(modelo);
+        jList.setBounds(20,20,200,300);
+        jPanel.add(jList);
     }
 }
