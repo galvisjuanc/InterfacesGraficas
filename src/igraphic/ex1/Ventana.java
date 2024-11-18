@@ -287,17 +287,12 @@ public class Ventana extends JFrame {
         modelo.addElement(new Persona("Mafe Cuellar", 33, "Colombiana"));
         modelo.addElement(new Persona("Mafe Cuellar", 33, "Colombiana"));
 
-
-
-
-
-
-
-
-
-
         JList jList = new JList(modelo);
         jList.setBounds(20,20,200,300);
         jPanel.add(jList);
+
+        JScrollPane scrollPane = new JScrollPane(jList, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setBounds(20, 20, 200, 300);
+        jPanel.add(scrollPane);
     }
 }
