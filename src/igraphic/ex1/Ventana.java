@@ -258,6 +258,44 @@ public class Ventana extends JFrame {
     private void colocarListas() {
         DefaultListModel modelo = new DefaultListModel();
 
+        modelo.addElement(new Persona("Juan Camilo Galvis", 32, "Colombiano"));
+        modelo.addElement(new Persona("Camila Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("A B", 33, "Colombiana"));
+        modelo.addElement(new Persona("Majo", 17, "Colombiana"));
+        modelo.addElement(new Persona("Majojo Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Majojojo Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Majojojojo Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Majojojojojo Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Majojo Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Majojo Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Majojojo Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Majojo Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Majojo Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Majojo Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Majoa Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafe Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafreda Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafreda Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafreda Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafreda Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafreda Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafreda Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafreda Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafreda Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafreda Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafe Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafe Cuellar", 33, "Colombiana"));
+        modelo.addElement(new Persona("Mafe Cuellar", 33, "Colombiana"));
+
+
+
+
+
+
+
+
+
+
         JList jList = new JList(modelo);
         jList.setBounds(20,20,200,300);
         jPanel.add(jList);
