@@ -25,6 +25,9 @@ public class Ventana extends JFrame {
     }
 
     private void colocarPanel() {
+        jPanel = new JPanel();
+        jPanel.setLayout(null);
+        this.add(jPanel);
     }
 
     private void colocarEtiqueta() {
