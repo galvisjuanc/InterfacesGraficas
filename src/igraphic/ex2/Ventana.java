@@ -1,6 +1,7 @@
 package igraphic.ex2;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Ventana extends JFrame {
     private JPanel jPanel;
@@ -31,6 +32,11 @@ public class Ventana extends JFrame {
     }
 
     private void colocarEtiqueta() {
+        jLabel = new JLabel();
+        jLabel.setText("Ingrese su nombre: ");
+        jLabel.setBounds(30,10,200,30);
+        jLabel.setFont(new Font("cooper black", Font.PLAIN, 30));
+        jPanel.add(jLabel);
     }
 
     private void colocarCajaDeTexto() {
