@@ -2,6 +2,8 @@ package igraphic.ex2;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class VentanaEx extends JFrame {
     private JPanel jPanel;
@@ -34,7 +36,7 @@ public class VentanaEx extends JFrame {
     private void colocarEtiqueta() {
         JLabel etiqueta = new JLabel("Ingrese su nombre: ");
         etiqueta.setBounds(30,10,200,30);
-        etiqueta.setFont(new Font("cooper black", Font.PLAIN, 30));
+        etiqueta.setFont(new Font("cooper black", Font.PLAIN, 20));
         jPanel.add(etiqueta);
     }
 
@@ -50,6 +52,15 @@ public class VentanaEx extends JFrame {
         jButton1.setBounds(150,100,150,40);
         jButton1.setFont(new Font("arial", Font.PLAIN, 15));
         jPanel.add(jButton1);
+
+        jLabel = new JLabel();
+        jLabel.setBounds(50,200,300,40);
+        jLabel.setFont(new Font("arial", Font.BOLD, 15));
+        jPanel.add(jLabel);
+
+        ActionListener actionListener = e -> jLabel.setText("Hola " + jTextField.getText());
+
+        jButton1.addActionListener(actionListener);
     }
 
 }
