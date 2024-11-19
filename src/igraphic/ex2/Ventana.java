@@ -40,6 +40,9 @@ public class Ventana extends JFrame {
     }
 
     private void colocarCajaDeTexto() {
+        jTextField = new JTextField();
+        jTextField.setBounds(30,50,300,30);
+        jPanel.add(jTextField);
     }
 
     private void colocarBoton() {
