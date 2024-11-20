@@ -50,7 +50,7 @@ public class VentanaEx3 extends JFrame {
 
             @Override
             public void mouseClicked(MouseEvent e) {
-
+                jTextArea.append("mouseClicked\n");
             }
 
             @Override
