@@ -58,6 +58,10 @@ public class VentanaEx extends JFrame {
         jLabel.setFont(new Font("arial", Font.BOLD, 15));
         jPanel.add(jLabel);
 
+        eventoOyenteDeAccion();
+    }
+
+    private void eventoOyenteDeAccion() {
         ActionListener actionListener = e -> jLabel.setText("Hola " + jTextField.getText());
 
         jButton1.addActionListener(actionListener);
