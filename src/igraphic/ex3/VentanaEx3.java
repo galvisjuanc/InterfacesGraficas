@@ -55,22 +55,23 @@ public class VentanaEx3 extends JFrame {
 
             @Override
             public void mousePressed(MouseEvent e) {
+                jTextArea.append("mousePressed\n");
 
             }
 
             @Override
             public void mouseReleased(MouseEvent e) {
-
+                jTextArea.append("mouseReleased\n");
             }
 
             @Override
             public void mouseEntered(MouseEvent e) {
-
+                jTextArea.append("mouseEntered\n");
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-
+                jTextArea.append("mouseExited\n");
             }
         };
 
