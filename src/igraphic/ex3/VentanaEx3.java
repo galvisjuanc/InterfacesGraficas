@@ -62,6 +62,10 @@ public class VentanaEx3 extends JFrame {
                 } else {
                     jTextArea.append("Click Izquierdo\n");
                 }
+
+                if(e.getClickCount() == 3) {
+                     jTextArea.append("Triple click\n");
+                }
             }
 
             @Override
