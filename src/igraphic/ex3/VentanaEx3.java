@@ -53,6 +53,8 @@ public class VentanaEx3 extends JFrame {
                 //jTextArea.append("mouseClicked\n");
                 if(e.isAltDown()) {
                     jTextArea.append("Alt\n");
+                } else if (e.isControlDown()) {
+                    jTextArea.append("Control\n");
                 }
             }
 
