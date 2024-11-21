@@ -59,6 +59,8 @@ public class VentanaEx3 extends JFrame {
                     jTextArea.append("Shift\n");
                 } else if (e.isMetaDown()) {
                     jTextArea.append("Click Derecho\n");
+                } else {
+                    jTextArea.append("Click Izquierdo\n");
                 }
             }
 
