@@ -1,5 +1,5 @@
 Interfaces-Graficas-de-Usuario
-GUI - Graphic User Interface
+GUI --- Graphic User Interface
 
 Objetivos:
 
