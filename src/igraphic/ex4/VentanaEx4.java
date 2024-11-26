@@ -49,7 +49,7 @@ public class VentanaEx4 extends JFrame {
     }
 
     private void eventoDeMovimientoRaton() {
-
+        jPanel.addMouseMotionListener(null);
 
     }
 
