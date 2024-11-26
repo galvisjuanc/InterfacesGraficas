@@ -53,12 +53,12 @@ public class VentanaEx4 extends JFrame {
         MouseMotionListener mouseMotionListener = new MouseMotionListener() {
             @Override
             public void mouseDragged(MouseEvent e) {
-
+                jTextArea.append("mouseDragged\n");
             }
 
             @Override
             public void mouseMoved(MouseEvent e) {
-
+                jTextArea.append("mouseMoved\n");
             }
         };
 
