@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
 public class VentanaEx4 extends JFrame {
 
@@ -49,7 +50,19 @@ public class VentanaEx4 extends JFrame {
     }
 
     private void eventoDeMovimientoRaton() {
-        jPanel.addMouseMotionListener(null);
+        MouseMotionListener mouseMotionListener = new MouseMotionListener() {
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                jTextArea.append("mouseDragged\n");
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent e) {
+                jTextArea.append("mouseMoved\n");
+            }
+        };
+
+        jPanel.addMouseMotionListener(mouseMotionListener);
 
     }
 
