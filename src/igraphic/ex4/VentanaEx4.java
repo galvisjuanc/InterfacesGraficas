@@ -36,6 +36,12 @@ public class VentanaEx4 extends JFrame {
         jTextArea = new JTextArea();
         jTextArea.setBounds(20,20,200,300);
         jPanel.add(jTextArea);
+
+        JScrollPane jScrollPane = new JScrollPane(jTextArea, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        jScrollPane.setBounds(20, 20, 200, 300);
+        //jScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        //jScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        jPanel.add(jScrollPane);
     }
 
     private void colocarBoton() {
