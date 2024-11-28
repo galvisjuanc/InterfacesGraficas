@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
 
 public class VentanaEx5 extends JFrame {
 
@@ -53,6 +55,12 @@ public class VentanaEx5 extends JFrame {
     }
 
     private void eventoRuedaMovimientoRaton() {
-        jPanel.addMouseWheelListener(null);
+        MouseWheelListener mouseWheelListener = new MouseWheelListener() {
+            @Override
+            public void mouseWheelMoved(MouseWheelEvent e) {
+                jTextArea.append("mouseWheelMoved: " + e.getWheelRotation() + "\n");
+            }
+        };
+        jPanel.addMouseWheelListener(mouseWheelListener);
     }
 }
