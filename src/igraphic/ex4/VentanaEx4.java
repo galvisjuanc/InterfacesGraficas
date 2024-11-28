@@ -13,7 +13,7 @@ public class VentanaEx4 extends JFrame {
 
     public VentanaEx4() {
         setBounds(50,50,600,600);
-        setTitle("Eventos del Mouse Listener");
+        setTitle("Eventos del Mouse Listener - Mouse Motion");
         iniciarComponentes();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
