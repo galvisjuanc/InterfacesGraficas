@@ -58,7 +58,12 @@ public class VentanaEx5 extends JFrame {
         MouseWheelListener mouseWheelListener = new MouseWheelListener() {
             @Override
             public void mouseWheelMoved(MouseWheelEvent e) {
-                jTextArea.append("mouseWheelMoved: " + e.getWheelRotation() + "\n");
+                if (e.getPreciseWheelRotation() == -1) {
+                    jTextArea.append("rueda arriba\n");
+                }
+                if (e.getPreciseWheelRotation() == 1) {
+                    jTextArea.append("rueda hacia abajo\n");
+                }
             }
         };
         jPanel.addMouseWheelListener(mouseWheelListener);
