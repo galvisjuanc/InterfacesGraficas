@@ -62,7 +62,7 @@ public class VentanaEx5 extends JFrame {
                     jTextArea.append("rueda arriba\n");
                 }
                 if (e.getPreciseWheelRotation() == 1) {
-                    jTextArea.append("rueda hacia abajo\n");
+                    jTextArea.append("rueda abajo\n");
                 }
             }
         };
