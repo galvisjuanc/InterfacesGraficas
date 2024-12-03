@@ -2,6 +2,8 @@ package igraphic.ex6;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
 
@@ -32,11 +34,11 @@ public class VentanaEx6 extends JFrame {
 
     private void colocarAreaTexto() {
         jTextArea = new JTextArea();
-        jTextArea.setBounds(20,20,200,300);
+        jTextArea.setBounds(230,30,200,300);
         jPanel.add(jTextArea);
 
         JScrollPane jScrollPane = new JScrollPane(jTextArea, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        jScrollPane.setBounds(20, 20, 200, 300);
+        jScrollPane.setBounds(230, 30, 200, 300);
         jPanel.add(jScrollPane);
     }
 
@@ -49,6 +51,23 @@ public class VentanaEx6 extends JFrame {
     }
 
     private void eventosDelTeclado() {
+        KeyListener keyListener = new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
 
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                jTextArea.append("keyPressed: " + e.getKeyChar() + "\n");
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        };
+
+        jTextField.addKeyListener(keyListener);
     }
 }
