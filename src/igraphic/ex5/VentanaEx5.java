@@ -59,7 +59,7 @@ public class VentanaEx5 extends JFrame {
             @Override
             public void mouseWheelMoved(MouseWheelEvent e) {
                 if (e.getPreciseWheelRotation() == -1) {
-                    jTextArea.append("rueda arriba\n");
+                    jTextArea.append("rueda va arriba\n");
                 }
                 if (e.getPreciseWheelRotation() == 1) {
                     jTextArea.append("rueda va abajo\n");
