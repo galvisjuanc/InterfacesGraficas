@@ -64,7 +64,7 @@ public class VentanaEx6 extends JFrame {
 
             @Override
             public void keyReleased(KeyEvent e) {
-
+                jTextArea.append("keyReleased: " + e.getKeyChar() + "\n");
             }
         };
 
