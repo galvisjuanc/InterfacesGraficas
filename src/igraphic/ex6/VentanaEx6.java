@@ -54,7 +54,7 @@ public class VentanaEx6 extends JFrame {
         KeyListener keyListener = new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-
+                jTextArea.append("keyTyped: " + e.getKeyChar() + "\n");
             }
 
             @Override
