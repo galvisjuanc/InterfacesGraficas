@@ -18,7 +18,6 @@ Steps to create a local repository:
 9. Type git push -u origin development to update the remote branch with your local branch
 
 Doing the steps mentioned lines above, you will see all you did on IntelliJ in Github.
-
 Remember to use git fetch to download any remote change to your project.
 
 …or create a new repository on the command line
