@@ -1,0 +1,4 @@
+Contabilizador de clics.
+
+Crear un Jframe para contar la cantidad de clics que se hagan. Usar un botón y un Jlabel que ira cambiando según cuantos
+clics se hagan.
