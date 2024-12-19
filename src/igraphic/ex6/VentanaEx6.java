@@ -1,11 +1,8 @@
 package igraphic.ex6;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseWheelEvent;
-import java.awt.event.MouseWheelListener;
 
 public class VentanaEx6 extends JFrame {
 
