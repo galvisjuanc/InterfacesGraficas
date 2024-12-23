@@ -35,7 +35,6 @@ public class Ventana extends JFrame {
         //colocarCampoDeContraseña();
         //colocarTablas();
         colocarListas();
-
     }
 
 
