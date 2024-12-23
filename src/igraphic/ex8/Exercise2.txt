@@ -1,0 +1,5 @@
+Por medio de una ventana, un panel, una etiqueta que indica qué deporte escoger si es su favorito,
+aparecen radiobotones para escoger alguna opciones.
+
+Si escojo mi deporte favorito, automáticamente aparece una imagen de cada deporte. Si selecciono un botón, se desseleccionan
+los demás.
