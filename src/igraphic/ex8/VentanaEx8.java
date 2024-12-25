@@ -7,11 +7,12 @@ public class VentanaEx8 extends JFrame {
 
     private JPanel panel;
     private JLabel label;
-    private JRadioButton radioButton;
+    private JRadioButton rb1, rb2, rb3, rb4;
 
     public VentanaEx8() {
         setBounds(50,50,600,600);
         setTitle("Selección del Deporte favorito");
+        setLocationRelativeTo(null);
         iniciarComponentes();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
@@ -36,5 +37,10 @@ public class VentanaEx8 extends JFrame {
         panel.add(label);
     }
 
-    private void colocarRadioBotones() {}
+    private void colocarRadioBotones() {
+        rb1 = new JRadioButton("Fútbol");
+        rb1.setBounds(20, 80,150,40);
+        rb1.setFont(new Font("arial",Font.BOLD,20));
+        panel.add(rb1);
+    }
 }
