@@ -82,7 +82,6 @@ public class VentanaEx8 extends JFrame {
         final ImageIcon image4 = new ImageIcon("src/igraphic/ex8/Imagenes/TenisDeMesa.jpg");
 
         imagenCustomizada(image1, image2, rb1, rb2);
-
         imagenCustomizada(image3, image4, rb3, rb4);
     }
 
