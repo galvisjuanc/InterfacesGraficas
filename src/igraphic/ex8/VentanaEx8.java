@@ -2,9 +2,7 @@ package igraphic.ex8;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Objects;
 
 public class VentanaEx8 extends JFrame {
 
@@ -81,11 +79,11 @@ public class VentanaEx8 extends JFrame {
         final ImageIcon image3 = new ImageIcon("src/igraphic/ex8/Imagenes/Natacion.jpg");
         final ImageIcon image4 = new ImageIcon("src/igraphic/ex8/Imagenes/TenisDeMesa.jpg");
 
-        imagenCustomizada(image1, image2, rb1, rb2);
-        imagenCustomizada(image3, image4, rb3, rb4);
+        imagenElegida(image1, image2, rb1, rb2);
+        imagenElegida(image3, image4, rb3, rb4);
     }
 
-    private void imagenCustomizada(ImageIcon image1, ImageIcon image2, JRadioButton rb1, JRadioButton rb2) {
+    private void imagenElegida(ImageIcon image1, ImageIcon image2, JRadioButton rb1, JRadioButton rb2) {
         ActionListener eventoAccionA = e -> imagen.setIcon(new ImageIcon(image1.getImage().getScaledInstance(imagen.getWidth(), imagen.getHeight(), Image.SCALE_SMOOTH)));
         rb1.addActionListener(eventoAccionA);
 
