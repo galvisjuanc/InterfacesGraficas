@@ -12,7 +12,7 @@ public class VentanaEx8 extends JFrame {
 
     public VentanaEx8() {
         setSize(900,900);
-        setTitle("Selección del Deporte favorito");
+        setTitle("Selección del deporte favorito");
         setLocationRelativeTo(null);
         iniciarComponentes();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
