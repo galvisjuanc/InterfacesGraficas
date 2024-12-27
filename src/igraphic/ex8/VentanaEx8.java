@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class VentanaEx8 extends JFrame {
 
     private JPanel panel;
-    private JLabel label, imagen;
+    private JLabel jLabel, imagen;
     private JRadioButton rb1, rb2, rb3, rb4;
 
     public VentanaEx8() {
@@ -31,11 +31,11 @@ public class VentanaEx8 extends JFrame {
     }
 
     private void colocarLabel() {
-        label = new JLabel();
-        label.setBounds(20,10,300,40);
-        label.setText("Escoja su deporte favorito");
-        label.setFont(new Font("arial",Font.BOLD,20));
-        panel.add(label);
+        jLabel = new JLabel();
+        jLabel.setBounds(20,10,300,40);
+        jLabel.setText("Escoja su deporte favorito");
+        jLabel.setFont(new Font("arial",Font.BOLD,20));
+        panel.add(jLabel);
     }
 
     private void colocarRadioBotones() {
