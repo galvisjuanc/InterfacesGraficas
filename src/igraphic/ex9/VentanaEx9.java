@@ -7,6 +7,7 @@ public class VentanaEx9 extends JFrame {
 
     private JPanel panel;
     private JLabel label;
+    private JButton botonRojo, botonVerde, botonAzul;
 
     public VentanaEx9() {
         setSize(600,400);
@@ -21,6 +22,7 @@ public class VentanaEx9 extends JFrame {
     private void iniciarComponentes() {
         colocarPanel();
         colocarEtiqueta();
+        colocarBotones();
     }
 
     private void colocarPanel() {
@@ -35,5 +37,10 @@ public class VentanaEx9 extends JFrame {
         label.setFont(new Font("Arial", Font.BOLD, 20));
         label.setHorizontalAlignment(SwingConstants.CENTER);
         panel.add(label);
+    }
+
+    private void colocarBotones() {
+        botonRojo = new JButton("Rojo");
+        botonRojo.setBounds(50, 230, 130, 50);
     }
 }
