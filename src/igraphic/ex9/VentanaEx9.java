@@ -45,5 +45,11 @@ public class VentanaEx9 extends JFrame {
         botonRojo.setForeground(Color.RED);
         botonRojo.setFont(new Font("Arial", Font.BOLD, 20));
         panel.add(botonRojo);
+
+        botonVerde = new JButton("Verde");
+        botonVerde.setBounds(230, 230, 130, 50);
+        botonVerde.setForeground(Color.GREEN);
+        botonVerde.setFont(new Font("Arial", Font.BOLD, 20));
+        panel.add(botonVerde);
     }
 }
