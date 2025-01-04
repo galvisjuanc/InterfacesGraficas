@@ -2,6 +2,8 @@ package igraphic.ex9;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
 
 public class VentanaEx9 extends JFrame {
 
@@ -29,6 +31,8 @@ public class VentanaEx9 extends JFrame {
         panel = new JPanel();
         panel.setLayout(null);
         this.add(panel);
+
+        eventoDeRuedaRaton();
     }
 
     private void colocarEtiqueta() {
@@ -57,5 +61,17 @@ public class VentanaEx9 extends JFrame {
         botonAzul.setForeground(Color.BLUE);
         botonAzul.setFont(new Font("Arial", Font.BOLD, 20));
         panel.add(botonAzul);
+    }
+
+    private void eventoDeRuedaRaton() {
+        MouseWheelListener eventoRueda = new MouseWheelListener() {
+
+            @Override
+            public void mouseWheelMoved(MouseWheelEvent e) {
+
+            }
+        };
+
+        panel.addMouseWheelListener(eventoRueda);
     }
 }
