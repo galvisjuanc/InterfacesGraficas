@@ -2,6 +2,8 @@ package igraphic.ex9;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
 
@@ -10,6 +12,7 @@ public class VentanaEx9 extends JFrame {
     private JPanel panel;
     private JLabel label;
     private JButton botonRojo, botonVerde, botonAzul;
+    private int pulsado = 0;
 
     public VentanaEx9() {
         setSize(600,400);
@@ -49,6 +52,13 @@ public class VentanaEx9 extends JFrame {
         botonRojo.setForeground(Color.RED);
         botonRojo.setFont(new Font("Arial", Font.BOLD, 18));
         panel.add(botonRojo);
+
+        botonRojo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pulsado = 1;
+            }
+        });
 
         botonVerde = new JButton("Verde");
         botonVerde.setBounds(230, 230, 130, 50);
