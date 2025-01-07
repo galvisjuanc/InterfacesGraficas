@@ -68,6 +68,10 @@ public class VentanaEx9 extends JFrame {
         botonAzul.setForeground(Color.BLUE);
         botonAzul.setFont(new Font("Arial", Font.BOLD, 18));
         panel.add(botonAzul);
+
+        botonAzul.addActionListener(e -> pulsado = 3);
+
+
     }
 
     private void eventoDeRuedaRaton() {
