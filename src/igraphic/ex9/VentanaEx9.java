@@ -53,18 +53,15 @@ public class VentanaEx9 extends JFrame {
         botonRojo.setFont(new Font("Arial", Font.BOLD, 18));
         panel.add(botonRojo);
 
-        botonRojo.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                pulsado = 1;
-            }
-        });
+        botonRojo.addActionListener(e -> pulsado = 1);
 
         botonVerde = new JButton("Verde");
         botonVerde.setBounds(230, 230, 130, 50);
         botonVerde.setForeground(Color.GREEN);
         botonVerde.setFont(new Font("Arial", Font.BOLD, 18));
         panel.add(botonVerde);
+
+        botonVerde.addActionListener(e -> pulsado = 2);
 
         botonAzul = new JButton("Azul");
         botonAzul.setBounds(410, 230, 130, 50);
