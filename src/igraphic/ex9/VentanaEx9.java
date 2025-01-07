@@ -79,7 +79,15 @@ public class VentanaEx9 extends JFrame {
 
             @Override
             public void mouseWheelMoved(MouseWheelEvent e) {
+                if (pulsado != 0) {
+                   if (pulsado == 1) {
 
+                   } else if (pulsado == 2) {
+
+                   } else {
+
+                   }
+                }
             }
         };
 
