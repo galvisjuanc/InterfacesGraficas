@@ -13,6 +13,7 @@ public class VentanaEx9 extends JFrame {
     private JLabel label;
     private JButton botonRojo, botonVerde, botonAzul;
     private int pulsado = 0;
+    private int contadorRojo=0, contadorVerde=0, contadorAzul=0;
 
     public VentanaEx9() {
         setSize(600,400);
@@ -78,13 +79,34 @@ public class VentanaEx9 extends JFrame {
         MouseWheelListener eventoRueda = e -> {
             if (pulsado != 0) {
                if (pulsado == 1) {
-
+                    contadorRojo += e.getWheelRotation();
+                    if (contadorRojo < 0) {
+                        contadorRojo = 0;
+                    }
+                    if (contadorRojo > 255) {
+                        contadorRojo = 255;
+                    }
                } else if (pulsado == 2) {
-
+                   contadorVerde += e.getWheelRotation();
+                   if (contadorVerde < 0) {
+                       contadorVerde = 0;
+                   }
+                   if (contadorVerde > 255) {
+                       contadorVerde = 255;
+                   }
                } else {
+                   contadorAzul += e.getWheelRotation();
+                   if (contadorAzul < 0) {
+                       contadorAzul = 0;
+                   }
+                   if (contadorAzul > 255) {
+                       contadorAzul = 255;
+                   }
 
                }
             }
+
+            label.setText("Color (Rojo = " + contadorRojo + ", Verde = " + contadorVerde + ", Azul = " + contadorAzul + ")");
         };
 
         panel.addMouseWheelListener(eventoRueda);
