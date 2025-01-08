@@ -42,7 +42,7 @@ public class VentanaEx9 extends JFrame {
     private void colocarEtiqueta() {
         label = new JLabel("Color (Rojo, Verde, Azul)");
         label.setBounds(100, 30, 400, 50);
-        label.setFont(new Font("Arial", Font.BOLD, 20));
+        label.setFont(new Font("Arial", Font.BOLD, 15));
         label.setHorizontalAlignment(SwingConstants.CENTER);
         panel.add(label);
     }
@@ -107,6 +107,7 @@ public class VentanaEx9 extends JFrame {
             }
 
             label.setText("Color (Rojo = " + contadorRojo + ", Verde = " + contadorVerde + ", Azul = " + contadorAzul + ")");
+            panel.setBackground(new Color(contadorRojo, contadorVerde, contadorAzul));
         };
 
         panel.addMouseWheelListener(eventoRueda);
