@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="igraphic.ex11.Window">
+  <grid id="27dc6" binding="panel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="ca35" class="javax.swing.JLabel" binding="etiqueta1">
+        <constraints/>
+        <properties>
+          <text value="Persona"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
