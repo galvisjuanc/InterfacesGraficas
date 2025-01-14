@@ -11,6 +11,7 @@ public class MainFrame extends JFrame {
     private JLabel lbWelcome;
 
     public MainFrame() {
+        setContentPane(mainPanel);
         setTitle("Welcome");
         setSize(450,300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
