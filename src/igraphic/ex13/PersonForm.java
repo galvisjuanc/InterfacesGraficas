@@ -19,4 +19,12 @@ public class PersonForm {
     private JLabel lbEmail;
     private JLabel lbCelular;
     private JLabel lbDireccion;
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("PersonForm");
+        frame.setContentPane(new PersonForm().mainPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
 }
