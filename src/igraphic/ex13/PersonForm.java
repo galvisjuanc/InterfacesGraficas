@@ -28,6 +28,7 @@ public class PersonForm extends JFrame {
     public PersonForm() {
         setContentPane(mainPanel);
         setTitle("PersonForm");
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setVisible(true);
