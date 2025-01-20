@@ -1,13 +1,13 @@
 package igraphic.ex13.model;
 
-public class Persona {
+public class SinglePerson {
     private String nombre;
     private String apellidos;
     private String email;
     private String celular;
     private String direccion;
 
-    public Persona(String nombre, String apellidos, String email, String celular, String direccion) {
+    public SinglePerson(String nombre, String apellidos, String email, String celular, String direccion) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.email = email;
@@ -53,5 +53,10 @@ public class Persona {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    @Override
+    public String toString() {
+        return this.nombre + " " + this.apellidos;
     }
 }
