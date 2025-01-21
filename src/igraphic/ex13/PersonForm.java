@@ -22,7 +22,7 @@ public class PersonForm extends JFrame {
     private JLabel lbEmail;
     private JLabel lbCelular;
 
-    private DefaultComboBoxModel model = new DefaultComboBoxModel();
+    private DefaultComboBoxModel<SinglePerson> model = new DefaultComboBoxModel<>();
     private JLabel lbDireccion;
 
     public PersonForm() {
