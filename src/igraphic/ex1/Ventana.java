@@ -33,8 +33,8 @@ public class Ventana extends JFrame {
         //colocarCasillasDeVerificacion();
         //colocarListasDesplegables();
         //colocarCampoDeContraseña();
-        //colocarTablas();
-        colocarListas();
+        colocarTablas();
+        //colocarListas();
     }
 
 
