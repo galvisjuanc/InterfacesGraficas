@@ -41,13 +41,13 @@ public class PersonForm extends JFrame {
         agregarModeloTabla();
 
         accionBotones();
+
         setContentPane(mainPanel);
         setTitle("PersonForm");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         pack();
         setVisible(true);
-
     }
 
     private void llenarModeloComboBox() {
