@@ -3,9 +3,14 @@ package igraphic.ex13;
 import igraphic.ex13.model.SinglePerson;
 
 import javax.swing.*;
+import javax.swing.event.TableColumnModelListener;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.JTableHeader;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Enumeration;
 
 public class PersonForm extends JFrame {
     private JPanel mainPanel;
@@ -25,21 +30,21 @@ public class PersonForm extends JFrame {
     private JLabel lbCelular;
 
     private DefaultComboBoxModel<SinglePerson> model = new DefaultComboBoxModel<>();
-    private DefaultTableModel modeloTabla = new DefaultTableModel();
+    private DefaultTableModel modeloTabla = new DefaultTableModel(new String[] {"Nombres", "Apellidos", "Email", "Celular", "Dirección"}, 0);
 
     private JLabel lbDireccion;
+    private JScrollPane jScrollPaneTable;
 
     public PersonForm() {
         comboBox1.setModel(model);
-        agregarModeloTabla();
-        tablaPersonas.setModel(modeloTabla);
         llenarModeloComboBox();
+        agregarModeloTabla();
 
         accionBotones();
         setContentPane(mainPanel);
         setTitle("PersonForm");
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         pack();
         setVisible(true);
 
@@ -54,11 +59,7 @@ public class PersonForm extends JFrame {
     }
 
     private void agregarModeloTabla() {
-        modeloTabla.addColumn("Nombres");
-        modeloTabla.addColumn("Apellidos");
-        modeloTabla.addColumn("Email");
-        modeloTabla.addColumn("Celular");
-        modeloTabla.addColumn("Direccion");
+        tablaPersonas.setModel(modeloTabla);
     }
 
     private void accionBotones() {
