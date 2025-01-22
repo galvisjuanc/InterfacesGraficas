@@ -63,9 +63,18 @@ public class PersonForm extends JFrame {
     private void agregarModeloTabla() {
         tablaPersonas.setModel(modeloTabla);
         ListSelectionListener oyenteSeleccion= e -> {
-            if(e.getValueIsAdjusting())
-                System.out.println("Fila seleccionada");
+            if(e.getValueIsAdjusting()) {
+                int filaSeleccionada = tablaPersonas.getSelectedRow();
+
+                String nombre = (String) modeloTabla.getValueAt(filaSeleccionada, 0);
+                String apellidos = (String) modeloTabla.getValueAt(filaSeleccionada, 1);
+                String email = (String) modeloTabla.getValueAt(filaSeleccionada, 2);
+                String celular = (String) modeloTabla.getValueAt(filaSeleccionada, 3);
+                String direccion = (String) modeloTabla.getValueAt(filaSeleccionada, 4);
+
+            }
         };
+
         tablaPersonas.getSelectionModel().addListSelectionListener(oyenteSeleccion);
     }
 
