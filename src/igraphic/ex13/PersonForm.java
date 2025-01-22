@@ -3,6 +3,8 @@ package igraphic.ex13;
 import igraphic.ex13.model.SinglePerson;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.event.TableColumnModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
@@ -60,6 +62,14 @@ public class PersonForm extends JFrame {
 
     private void agregarModeloTabla() {
         tablaPersonas.setModel(modeloTabla);
+        ListSelectionListener oyenteSeleccion= new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                if(e.getValueIsAdjusting())
+                    System.out.println("Fila seleccionada");
+            }
+        };
+        tablaPersonas.getSelectionModel().addListSelectionListener(oyenteSeleccion);
     }
 
     private void accionBotones() {
