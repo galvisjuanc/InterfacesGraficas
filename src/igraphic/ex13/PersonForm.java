@@ -72,6 +72,11 @@ public class PersonForm extends JFrame {
                 String celular = (String) modeloTabla.getValueAt(filaSeleccionada, 3);
                 String direccion = (String) modeloTabla.getValueAt(filaSeleccionada, 4);
 
+                txfdNombre.setText(nombre);
+                txfdApellidos.setText(apellidos);
+                txfdEmail.setText(email);
+                txfdCelular.setText(celular);
+                txfdDireccion.setText(direccion);
             }
         };
 
