@@ -62,12 +62,9 @@ public class PersonForm extends JFrame {
 
     private void agregarModeloTabla() {
         tablaPersonas.setModel(modeloTabla);
-        ListSelectionListener oyenteSeleccion= new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent e) {
-                if(e.getValueIsAdjusting())
-                    System.out.println("Fila seleccionada");
-            }
+        ListSelectionListener oyenteSeleccion= e -> {
+            if(e.getValueIsAdjusting())
+                System.out.println("Fila seleccionada");
         };
         tablaPersonas.getSelectionModel().addListSelectionListener(oyenteSeleccion);
     }
