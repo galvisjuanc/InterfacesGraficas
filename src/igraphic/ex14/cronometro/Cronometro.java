@@ -2,6 +2,8 @@ package igraphic.ex14.cronometro;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Cronometro extends JFrame{
     private JPanel mainPanel;
@@ -12,9 +14,27 @@ public class Cronometro extends JFrame{
     private JLabel valorCronometro;
 
     private Timer tiempo;
+    private int centesimaSegundos = 0;
+    private int segundos = 0;
+    private int minutos = 0;
+    private int horas = 0;
+
+    private ActionListener acciones = new ActionListener(){
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            centesimaSegundos++;
+            if(centesimaSegundos == 100) {
+                segundos++;
+                centesimaSegundos = 0;
+            }
+        }
+    };
 
     public Cronometro() {
         configurarBotones();
+
+        tiempo = new Timer(10, acciones);
 
         setContentPane(mainPanel);
         setResizable(false);
