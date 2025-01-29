@@ -19,16 +19,22 @@ public class Cronometro extends JFrame{
     private int minutos = 0;
     private int horas = 0;
 
-    private ActionListener acciones = new ActionListener(){
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            centesimaSegundos++;
-            if(centesimaSegundos == 100) {
-                segundos++;
-                centesimaSegundos = 0;
-            }
+    private ActionListener acciones = e -> {
+        centesimaSegundos++;
+        if(centesimaSegundos == 100) {
+            segundos++;
+            centesimaSegundos = 0;
         }
+        if(segundos == 60) {
+            minutos++;
+            segundos = 0;
+        }
+        if(minutos == 60) {
+            horas++;
+            minutos = 0;
+        }
+
+        actualizarEtiquetaTiempo();
     };
 
     public Cronometro() {
@@ -55,6 +61,16 @@ public class Cronometro extends JFrame{
         btnIniciar.setForeground(Color.RED);
         btnPausar.setForeground(Color.RED);
         btnReiniciar.setForeground(Color.RED);
+    }
+
+    private void actualizarEtiquetaTiempo() {
+        String texto = (horas <= 9 ? "0" : "") +
+                horas + (minutos <= 9 ? "0" : "") +
+                minutos + (segundos <= 9 ? "0" : "") +
+                segundos + (centesimaSegundos <= 9 ? "0" : "") +
+                centesimaSegundos;
+
+        valorCronometro.setText(texto);
     }
 
     public static void main(String[] args) {
