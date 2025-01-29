@@ -11,6 +11,8 @@ public class Cronometro extends JFrame{
     private JButton btnReiniciar;
     private JLabel valorCronometro;
 
+    private Timer tiempo;
+
     public Cronometro() {
         configurarBotones();
 
