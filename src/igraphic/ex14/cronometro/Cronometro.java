@@ -77,12 +77,30 @@ public class Cronometro extends JFrame{
             btnIniciar.setEnabled(false);
             btnIniciar.setText("Reanudar");
             btnPausar.setEnabled(true);
-            btnPausar.setEnabled(true);
+            btnReiniciar.setEnabled(true);
         });
 
         btnPausar.addActionListener(e -> {
             tiempo.stop();
             btnIniciar.setEnabled(true);
+            btnPausar.setEnabled(false);
+        });
+
+        btnReiniciar.addActionListener(e -> {
+            if(tiempo.isRunning()) {
+                tiempo.stop();
+                btnIniciar.setEnabled(true);
+            }
+            btnIniciar.setText("Iniciar");
+            btnPausar.setEnabled(false);
+            btnReiniciar.setEnabled(false);
+
+            horas = 0;
+            minutos = 0;
+            segundos = 0;
+            centesimaSegundos = 0;
+
+            actualizarEtiquetaTiempo();
         });
     }
 
