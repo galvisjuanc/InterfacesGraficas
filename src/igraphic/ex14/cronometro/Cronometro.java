@@ -2,7 +2,6 @@ package igraphic.ex14.cronometro;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Cronometro extends JFrame{
@@ -11,7 +10,7 @@ public class Cronometro extends JFrame{
     private JButton btnIniciar;
     private JButton btnPausar;
     private JButton btnReiniciar;
-    private JLabel valorCronometro;
+    private JLabel lblTiempo;
 
     private Timer tiempo;
     private int centesimaSegundos = 0;
@@ -52,25 +51,33 @@ public class Cronometro extends JFrame{
     }
 
     private void configurarBotones() {
-        btnIniciar = new JButton("Iniciar");
-        btnPausar = new JButton("Pausar");
-        btnReiniciar = new JButton("Reiniciar");
         btnIniciar.setBackground(Color.CYAN);
         btnPausar.setBackground(Color.CYAN);
         btnReiniciar.setBackground(Color.CYAN);
         btnIniciar.setForeground(Color.RED);
         btnPausar.setForeground(Color.RED);
         btnReiniciar.setForeground(Color.RED);
+        accionesBotones();
     }
 
     private void actualizarEtiquetaTiempo() {
         String texto = (horas <= 9 ? "0" : "") +
-                horas + (minutos <= 9 ? "0" : "") +
-                minutos + (segundos <= 9 ? "0" : "") +
-                segundos + (centesimaSegundos <= 9 ? "0" : "") +
+                horas + ":" + (minutos <= 9 ? "0" : "") +
+                minutos + ":" + (segundos <= 9 ? "0" : "") +
+                segundos + ":" + (centesimaSegundos <= 9 ? "0" : "") +
                 centesimaSegundos;
 
-        valorCronometro.setText(texto);
+        lblTiempo.setText(texto);
+    }
+
+    private void accionesBotones() {
+        btnIniciar.addActionListener(e -> {
+            tiempo.start();
+            btnIniciar.setEnabled(false);
+            btnIniciar.setText("Reanudar");
+            btnPausar.setEnabled(true);
+            btnPausar.setEnabled(true);
+        });
     }
 
     public static void main(String[] args) {

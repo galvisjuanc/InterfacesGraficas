@@ -57,7 +57,7 @@
           </component>
         </children>
       </grid>
-      <component id="dd086" class="javax.swing.JLabel" binding="valorCronometro">
+      <component id="dd086" class="javax.swing.JLabel" binding="lblTiempo">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
