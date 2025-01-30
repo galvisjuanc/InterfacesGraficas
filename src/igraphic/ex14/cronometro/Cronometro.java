@@ -2,6 +2,7 @@ package igraphic.ex14.cronometro;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Cronometro extends JFrame{
@@ -77,6 +78,11 @@ public class Cronometro extends JFrame{
             btnIniciar.setText("Reanudar");
             btnPausar.setEnabled(true);
             btnPausar.setEnabled(true);
+        });
+
+        btnPausar.addActionListener(e -> {
+            tiempo.stop();
+            btnIniciar.setEnabled(true);
         });
     }
 
