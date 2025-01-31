@@ -53,11 +53,11 @@ public class Cronometro extends JFrame{
 
     private void configurarBotones() {
         btnIniciar.setBackground(Color.CYAN);
-        btnPausar.setBackground(Color.CYAN);
-        btnReiniciar.setBackground(Color.CYAN);
+        btnPausar.setBackground(Color.GRAY);
+        btnReiniciar.setBackground(Color.BLACK);
         btnIniciar.setForeground(Color.RED);
-        btnPausar.setForeground(Color.RED);
-        btnReiniciar.setForeground(Color.RED);
+        btnPausar.setForeground(Color.YELLOW);
+        btnReiniciar.setForeground(Color.GREEN);
         accionesBotones();
     }
 
