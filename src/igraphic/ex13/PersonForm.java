@@ -45,7 +45,7 @@ public class PersonForm extends JFrame {
         accionBotones();
 
         setContentPane(mainPanel);
-        setTitle("PersonForm");
+        setTitle("Formulario de Personas");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         pack();
