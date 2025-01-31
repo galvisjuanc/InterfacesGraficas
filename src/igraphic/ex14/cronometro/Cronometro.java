@@ -39,6 +39,7 @@ public class Cronometro extends JFrame{
 
     public Cronometro() {
         configurarBotones();
+        mainLabel.setForeground(Color.BLACK);
 
         tiempo = new Timer(10, acciones);
 
