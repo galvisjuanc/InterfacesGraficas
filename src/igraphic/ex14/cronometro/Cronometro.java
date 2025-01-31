@@ -44,7 +44,7 @@ public class Cronometro extends JFrame{
 
         setContentPane(mainPanel);
         setResizable(false);
-        setTitle("Cronometro");
+        setTitle("Cronometro Personalizado");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         pack();
