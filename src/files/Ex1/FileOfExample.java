@@ -14,5 +14,16 @@ public class FileOfExample {
         } else {
             System.out.println("El archivo no existe.");
         }
+
+        File directorio = new File ("carpeta.txt");
+
+        if (directorio.exists()) {
+            System.out.println("El directorio si existe.");
+            System.out.println(directorio.getAbsolutePath());
+            System.out.println("¿Es un directorio? --> " + directorio.canRead());
+            System.out.println("¿Se puede leer? --> " + directorio.canRead());
+        } else {
+            System.out.println("El directorio no existe.");
+        }
     }
 }
