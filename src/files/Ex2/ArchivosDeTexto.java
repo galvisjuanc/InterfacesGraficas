@@ -39,6 +39,17 @@ public class ArchivosDeTexto {
         }
     }
 
+    private void añadirTexto() {
+        try {
+            FileWriter escribir = new FileWriter(archivo, true);
+            escribir.write("\r\nMás mensajes");
+            escribir.write("\r\nMás información");
+            escribir.close();
+        } catch (IOException e) {
+
+        }
+    }
+
     public static void main(String[] args) {
         ArchivosDeTexto arch = new ArchivosDeTexto();
         arch.crearArchivo();
