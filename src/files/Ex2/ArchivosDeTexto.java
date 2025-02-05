@@ -1,6 +1,7 @@
 package files.Ex2;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class ArchivosDeTexto {
@@ -28,9 +29,20 @@ public class ArchivosDeTexto {
         }
     }
 
+    private void escribirArchivo() {
+        try{
+            FileWriter escribir = new FileWriter(archivo);
+            escribir.write("Hola Mundo");
+            escribir.close();
+        } catch (IOException e) {
+            System.err.println("Error, no se pudo escribir sobre el archivo");
+        }
+    }
+
     public static void main(String[] args) {
         ArchivosDeTexto arch = new ArchivosDeTexto();
         arch.crearArchivo();
-        arch.crearCarpeta();
+        // arch.crearCarpeta();
+        arch.escribirArchivo();
     }
 }
