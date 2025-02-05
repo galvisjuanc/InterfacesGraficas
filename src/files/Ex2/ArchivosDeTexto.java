@@ -54,6 +54,7 @@ public class ArchivosDeTexto {
         ArchivosDeTexto arch = new ArchivosDeTexto();
         arch.crearArchivo();
         // arch.crearCarpeta();
-        arch.escribirArchivo();
+        // arch.escribirArchivo();
+        arch.añadirTexto();
     }
 }
