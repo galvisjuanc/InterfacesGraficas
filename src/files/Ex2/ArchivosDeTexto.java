@@ -39,14 +39,12 @@ public class ArchivosDeTexto {
         }
     }
 
-    private void añadirTexto() {
-        try {
-            FileWriter escribir = new FileWriter(archivo, true);
-            escribir.write("\r\nMás mensajes");
-            escribir.write("\r\nMás información");
-            escribir.close();
+    private void addText() {
+        try(FileWriter escribir = new FileWriter(archivo, true)) {
+            escribir.write("\r\nMás mensajes en el archivo creado");
+            escribir.write("\r\nMás información relevante");
         } catch (IOException e) {
-
+            System.err.println("Error al escribir el archivo");
         }
     }
 
@@ -55,6 +53,6 @@ public class ArchivosDeTexto {
         arch.crearArchivo();
         // arch.crearCarpeta();
         // arch.escribirArchivo();
-        arch.añadirTexto();
+        arch.addText();
     }
 }
