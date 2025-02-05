@@ -18,8 +18,19 @@ public class ArchivosDeTexto {
         }
     }
 
+    private void crearCarpeta() {
+        archivo = new File("CarpetaPrueba");
+
+        if(archivo.mkdir()) {
+            System.out.println("Se ha creado la carpeta correctamente");
+        } else {
+            System.err.println("Error, no se ha podido crear la carpeta");
+        }
+    }
+
     public static void main(String[] args) {
         ArchivosDeTexto arch = new ArchivosDeTexto();
         arch.crearArchivo();
+        arch.crearCarpeta();
     }
 }
