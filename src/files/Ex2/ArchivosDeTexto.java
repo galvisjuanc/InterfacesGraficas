@@ -1,8 +1,6 @@
 package files.Ex2;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class ArchivosDeTexto {
     File archivo;
@@ -48,11 +46,23 @@ public class ArchivosDeTexto {
         }
     }
 
+    private void readText() {
+        String cadena;
+
+        try(FileReader lector = new FileReader(archivo)) {
+            BufferedReader entrada = new BufferedReader(lector);
+            cadena = entrada.readLine();
+
+        } catch (IOException e) {
+            System.err.println("error: " + e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
         ArchivosDeTexto arch = new ArchivosDeTexto();
         arch.crearArchivo();
         // arch.crearCarpeta();
         // arch.escribirArchivo();
-        arch.addText();
+        //arch.addText();
     }
 }
