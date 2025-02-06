@@ -52,7 +52,10 @@ public class ArchivosDeTexto {
         try(FileReader lector = new FileReader(archivo)) {
             BufferedReader entrada = new BufferedReader(lector);
             cadena = entrada.readLine();
-            System.out.println(cadena);
+            while(cadena != null) {
+                System.out.println(cadena);
+                cadena = entrada.readLine();
+            }
 
         } catch (IOException e) {
             System.err.println("error: " + e.getMessage());
