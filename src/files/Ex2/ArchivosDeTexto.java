@@ -52,6 +52,7 @@ public class ArchivosDeTexto {
         try(FileReader lector = new FileReader(archivo)) {
             BufferedReader entrada = new BufferedReader(lector);
             cadena = entrada.readLine();
+            System.out.println(cadena);
 
         } catch (IOException e) {
             System.err.println("error: " + e.getMessage());
@@ -61,6 +62,7 @@ public class ArchivosDeTexto {
     public static void main(String[] args) {
         ArchivosDeTexto arch = new ArchivosDeTexto();
         arch.crearArchivo();
+        arch.readText();
         // arch.crearCarpeta();
         // arch.escribirArchivo();
         //arch.addText();
