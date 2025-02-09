@@ -13,7 +13,7 @@ public class ArchivosDeTexto {
                 System.out.println("El archivo se creó correctamente!");
             }
         } catch (IOException e) {
-            System.err.println("No se pudo crear el archivo");
+            System.err.println("No se pudo crear el archivo!");
         }
     }
 
