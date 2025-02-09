@@ -10,7 +10,7 @@ public class ArchivosDeTexto {
 
         try{
             if(archivo.createNewFile()) {
-                System.out.println("El archivo se creó correctamente");
+                System.out.println("El archivo se creó correctamente!");
             }
         } catch (IOException e) {
             System.err.println("No se pudo crear el archivo");
