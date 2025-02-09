@@ -21,7 +21,7 @@ public class ArchivosDeTexto {
         archivo = new File("CarpetaPrueba");
 
         if(archivo.mkdir()) {
-            System.out.println("Se ha creado la carpeta correctamente");
+            System.out.println("Se ha creado la carpeta correctamente!");
         } else {
             System.err.println("Error, no se ha podido crear la carpeta!");
         }
