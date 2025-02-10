@@ -42,7 +42,7 @@ public class ArchivosDeTexto {
             escribir.write("\r\nMás mensajes en el archivo creado");
             escribir.write("\r\nMás información relevante");
         } catch (IOException e) {
-            System.err.println("Error al escribir el archivo");
+            System.err.println("Error al escribir el archivo!");
         }
     }
 
