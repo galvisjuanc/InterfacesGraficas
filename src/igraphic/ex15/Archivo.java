@@ -17,4 +17,8 @@ public class Archivo {
             System.err.println("No se pudo crear el archivo. Error: " + e.getMessage());
         }
     }
+
+    public void escribirTexto(Persona persona) {
+
+    }
 }
