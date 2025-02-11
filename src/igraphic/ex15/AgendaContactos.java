@@ -1,6 +1,8 @@
 package igraphic.ex15;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AgendaContactos extends JFrame{
     private JToolBar jToolBar;
@@ -24,6 +26,8 @@ public class AgendaContactos extends JFrame{
         JMenu editMenu = new JMenu("Edit");
         jToolBar.add(editMenu);
 
+        accionesBoton();
+
         setContentPane(mainPanel);
         setTitle("Agenda de Contactos");
         setLocationRelativeTo(null);
@@ -31,6 +35,18 @@ public class AgendaContactos extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         pack();
         setVisible(true);
+    }
+
+    private void accionesBoton() {
+        btnGuardar.addActionListener(e -> {
+            Archivo archivo = new Archivo();
+            archivo.crearArchivo();
+
+            String nombre = textFieldName.getText();
+            String correo = textFieldCorreo.getText();
+            String celular = textFieldCelular.getText();
+
+        });
     }
 
     public static void main(String[] args) {
