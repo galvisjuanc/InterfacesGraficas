@@ -21,7 +21,7 @@ public class Archivo {
 
     public void escribirTexto(Persona persona) {
         try (FileWriter escribir = new FileWriter(archivo, true)){
-            escribir.write(persona.getNombre() + "%" + persona.getCorreo() + "%" + persona.getCelular() + "\r\n");
+            escribir.write(persona.getNombre() + " % " + persona.getCorreo() + " % " + persona.getCelular() + "\r\n");
         } catch (IOException e) {
             System.err.println("No se pudo escribir el archivo. Error: " + e.getMessage());
         }
