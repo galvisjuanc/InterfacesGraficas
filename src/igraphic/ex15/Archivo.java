@@ -1,6 +1,7 @@
 package igraphic.ex15;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Archivo {
@@ -19,6 +20,10 @@ public class Archivo {
     }
 
     public void escribirTexto(Persona persona) {
-
+        try (FileWriter escribir = new FileWriter(archivo)){
+            escribir.write(persona.getNombre() + "%" + persona.getCorreo() + "%" + persona.getCelular() + "\r\n");
+        } catch (IOException e) {
+            System.err.println("No se pudo escribir el archivo. Error: " + e.getMessage());
+        }
     }
 }
