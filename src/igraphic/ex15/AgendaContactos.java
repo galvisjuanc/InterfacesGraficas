@@ -46,6 +46,14 @@ public class AgendaContactos extends JFrame{
             String correo = textFieldCorreo.getText();
             String celular = textFieldCelular.getText();
 
+            Persona persona = new Persona(nombre, correo, celular);
+
+            archivo.escribirTexto(persona);
+
+            textFieldName.setText("");
+            textFieldCorreo.setText("");
+            textFieldCelular.setText("");
+
         });
     }
 
