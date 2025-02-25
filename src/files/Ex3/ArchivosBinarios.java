@@ -1,9 +1,6 @@
 package files.Ex3;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 public class ArchivosBinarios {
 
@@ -23,6 +20,14 @@ public class ArchivosBinarios {
 
         } catch (IOException e) {
             System.err.println("No se pudo escribir el archivo. Error: " + e.getMessage());
+        }
+    }
+
+    private void leerBinario() throws FileNotFoundException {
+        try (FileInputStream archivo = new FileInputStream("personas.bin")) {
+
+        } catch (IOException e) {
+
         }
     }
 
