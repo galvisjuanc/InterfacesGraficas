@@ -24,10 +24,18 @@ public class ArchivosBinarios {
     }
 
     private void leerBinario() {
+
+        PersonBin personBin;
         try (FileInputStream archivo = new FileInputStream("personas.bin")) {
             ObjectInputStream lectura = new ObjectInputStream(archivo);
+
+            while(true) {
+                personBin = (PersonBin) lectura.readObject();
+            }
         } catch (IOException e) {
             System.err.println("No se pudo leer el archivo. Error: " + e.getMessage());
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 
