@@ -23,11 +23,11 @@ public class ArchivosBinarios {
         }
     }
 
-    private void leerBinario() throws FileNotFoundException {
+    private void leerBinario() {
         try (FileInputStream archivo = new FileInputStream("personas.bin")) {
-
+            ObjectInputStream lectura = new ObjectInputStream(archivo);
         } catch (IOException e) {
-
+            System.err.println("No se pudo leer el archivo. Error: " + e.getMessage());
         }
     }
 
