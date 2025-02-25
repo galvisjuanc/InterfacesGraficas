@@ -26,12 +26,15 @@ public class ArchivosBinarios {
     private void leerBinario() {
 
         PersonBin personBin;
-        try (FileInputStream archivo = new FileInputStream("personas.bin")) {
+        try (FileInputStream archivo = new FileInputStream("C:\\Users\\galvi\\OneDrive\\Documentos\\Java Projects\\InterfacesGraficas\\personas.bin")) {
             ObjectInputStream lectura = new ObjectInputStream(archivo);
 
             while(true) {
                 personBin = (PersonBin) lectura.readObject();
+                personBin.mostrarDatos();
             }
+        } catch (EOFException e) {
+            return;
         } catch (IOException e) {
             System.err.println("No se pudo leer el archivo. Error: " + e.getMessage());
         } catch (ClassNotFoundException e) {
@@ -43,5 +46,6 @@ public class ArchivosBinarios {
         ArchivosBinarios archivosBinarios = new ArchivosBinarios();
 
         archivosBinarios.escribirBinario();
+        archivosBinarios.leerBinario();
     }
 }
