@@ -25,7 +25,7 @@ public class ArchivosBinarios {
 
     private void añadirBinario() throws FileNotFoundException {
         try (FileOutputStream archivo = new FileOutputStream("personas.bin", true)) {
-            ObjectOutputStream escritura = new ObjectOutputStream(archivo);
+            AgregarContenido escritura = new AgregarContenido(archivo);
 
             PersonBin personBin1 = new PersonBin("Mafe", 28);
             PersonBin personBin2 = new PersonBin("Dwight", 43);
