@@ -23,6 +23,23 @@ public class ArchivosBinarios {
         }
     }
 
+    private void añadirBinario() throws FileNotFoundException {
+        try (FileOutputStream archivo = new FileOutputStream("personas.bin", true)) {
+            ObjectOutputStream escritura = new ObjectOutputStream(archivo);
+
+            PersonBin personBin1 = new PersonBin("Mafe", 28);
+            PersonBin personBin2 = new PersonBin("Dwight", 43);
+
+            escritura.writeObject(personBin1);
+            escritura.writeObject(personBin2);
+
+            escritura.close();
+
+        } catch (IOException e) {
+            System.err.println("No se pudo escribir el archivo. Error: " + e.getMessage());
+        }
+    }
+
     private void leerBinario() {
 
         PersonBin personBin;
