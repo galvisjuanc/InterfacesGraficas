@@ -62,7 +62,8 @@ public class ArchivosBinarios {
     public static void main(String[] args) throws FileNotFoundException {
         ArchivosBinarios archivosBinarios = new ArchivosBinarios();
 
-        archivosBinarios.escribirBinario();
+        //archivosBinarios.escribirBinario();
+        archivosBinarios.añadirBinario();
         archivosBinarios.leerBinario();
     }
 }
